@@ -7,8 +7,7 @@ const filter = () => {
 };
 
 const sort = () => {
-  const championsArray = Object.values(LOL.data);
-  // let showAll = championsArray.map(champion => champion.name);
+
   championsArray.sort((championA, championB) => {
     console.log(`${championA.id} A: ${championA.info.attack}`);
     console.log(`${championB.id} B: ${championB.info.attack}`);
