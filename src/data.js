@@ -1,16 +1,25 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
 
 
 const filter = () => {
+  const tanks = LOL.data.tags.filter(tags => (LOL.data.tags == 'Tank'));
+  document.getElementById('champText').innerHTML= tanks;
   return 'filter';
 };
 
 const sort = () => {
-  return 'sort';
+  const championsArray = Object.values(LOL.data);
+  // let showAll = championsArray.map(champion => champion.name);
+  championsArray.sort((championA, championB) => {
+    console.log(`${championA.id} A: ${championA.info.attack}`);
+    console.log(`${championB.id} B: ${championB.info.attack}`);
+    return championB.info.attack - championA.info.attack});
+  console.log(championsArray);
 };
 
 const computeStats = () => {
+  document.getElementById("champText").innerHTML= LOL.data.Aatrox.title;
+  document.getElementById("champText").innerHTML= LOL.data.Aatrox.info;
+
   return 'computeStats';
 };
 
