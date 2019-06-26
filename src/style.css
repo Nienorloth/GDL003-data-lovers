@@ -1,0 +1,6 @@
+body {
+    background-image: url("imagenes/backpic.jpg");
+    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+}
