@@ -2,19 +2,19 @@ const championsArray = Object.values(LOL.data);
 
 const showAll = () => {
   let showNames = championsArray.forEach(champion => {
-    let x = document.createElement("IMG");
-    x.setAttribute("src", champion.img);
-    x.setAttribute("width", "60");
-    x.setAttribute("height", "60");
-    document.getElementById("champText").appendChild(x);
-    document.getElementById("champText").innerHTML +=
-      " " +
-      champion.name +
-      ", " +
-      champion.title +
-      ". " +
-      champion.tags +
-      ".<br>";
+    let championPic = document.createElement("IMG");
+    championPic.setAttribute("src", champion.img);
+    championPic.setAttribute("width", "60");
+    championPic.setAttribute("height", "60");
+    champText.appendChild(championPic);
+    champText.innerHTML +=
+      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".";
+    let bioButton = document.createElement("button");
+    bioButton.innerHTML = "Biography";
+    champText.appendChild(bioButton);
+    let statsButton = document.createElement("button");
+    statsButton.innerHTML = "Stats";
+    champText.appendChild(statsButton);
   });
   console.log(showNames);
 };
