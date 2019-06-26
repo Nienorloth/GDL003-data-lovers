@@ -16,8 +16,6 @@ const sort = () => {
 };
 
 const computeStats = () => {
-  document.getElementById("champText").innerHTML= LOL.data.Aatrox.title;
-  document.getElementById("champText").innerHTML= LOL.data.Aatrox.info;
 
   return 'computeStats';
 };
