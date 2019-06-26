@@ -7,14 +7,33 @@ const showAll = () => {
     x.setAttribute("width", "60");
     x.setAttribute("height", "60");
     document.getElementById("champText").appendChild(x);
-    document.getElementById("champText").innerHTML += " " + champion.name + ", " + champion.title + ". " + champion.tags + ".<br>";
+    document.getElementById("champText").innerHTML +=
+      " " +
+      champion.name +
+      ", " +
+      champion.title +
+      ". " +
+      champion.tags +
+      ".<br>";
   });
   console.log(showNames);
 };
 document.getElementById("allChampButton").addEventListener("click", showAll);
-document.getElementById("tanksButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("magesButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("assassinsButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("marksmenButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("supportButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("statButton").addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("tanksButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("magesButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("assassinsButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("marksmenButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("supportButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("statButton")
+  .addEventListener("click", window.dataManager.sort);
