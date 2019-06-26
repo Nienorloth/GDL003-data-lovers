@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1"
+    />
     <link
       href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap"
       rel="stylesheet"
@@ -15,17 +18,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>Champion Archive</header>
-    <button class="buttons" id="allChampButton">All Champions</button>
-    <button class="buttons" id="tanksButton">Tanks</button>
-    <button class="buttons" id="magesButton">Mages</button>
-    <button class="buttons" id="assassinsButton">Assassins</button>
-    <button class="buttons" id="marksmenButton">Marksmen</button>
-    <button class="buttons" id="fightersButton">Fighters</button>
-    <button class="buttons" id="supportButton">Support</button>
-    <button class="buttons" id="statButton">Statistics</button>
-    <section id="champions">
-      <p id="champText"></p>
+    <section id="container">
+      <header>Champion Archive</header>
+      <button class="buttons" id="allChampButton">All Champions</button>
+      <button class="buttons" id="tanksButton">Tanks</button>
+      <button class="buttons" id="magesButton">Mages</button>
+      <button class="buttons" id="assassinsButton">Assassins</button>
+      <button class="buttons" id="marksmenButton">Marksmen</button>
+      <button class="buttons" id="fightersButton">Fighters</button>
+      <button class="buttons" id="supportButton">Support</button>
+      <button class="buttons" id="statButton">Statistics</button>
+      <section id="champions">
+        <p id="champText"></p>
+      </section>
     </section>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
