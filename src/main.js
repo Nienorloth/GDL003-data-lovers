@@ -1,23 +1,31 @@
 const championsArray = Object.values(LOL.data);
+let bioButton = document.createElement("button");
 
 const showAll = () => {
-  let showNames = championsArray.forEach(champion => {
+    championsArray.forEach(champion => {
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
     championPic.setAttribute("width", "60");
     championPic.setAttribute("height", "60");
     champText.appendChild(championPic);
     champText.innerHTML +=
-      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".";
-    let bioButton = document.createElement("button");
+      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
     bioButton.innerHTML = "Biography";
+    bioButton.className = "Bio";
     champText.appendChild(bioButton);
     let statsButton = document.createElement("button");
     statsButton.innerHTML = "Stats";
     champText.appendChild(statsButton);
+    champText.innerHTML += "<br>"
   });
-  console.log(showNames);
+  const characterBio = () => {
+    alert("si");
+  document.getElementById("champText").style.display = "none";
+  document.getElementById("characters").style.display = "block";
+  }
+  document.getElementsbyClassName("Bio").addEventListener("click", characterBio);
 };
+
 document.getElementById("allChampButton").addEventListener("click", showAll);
 document
   .getElementById("tanksButton")
@@ -37,3 +45,4 @@ document
 document
   .getElementById("statButton")
   .addEventListener("click", window.dataManager.sort);
+
