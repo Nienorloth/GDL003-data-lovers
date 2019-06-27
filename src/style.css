@@ -29,8 +29,6 @@ body {
   font-family: "Slabo 27px", serif;
   border-width: 0.2em;
   border-style: inset;
-  text-align: center;
-  float: center;
 }
 .buttons:hover {
   background: rgba(0, 0, 0, 0);
@@ -40,4 +38,12 @@ body {
   font-weight: bold;
 }
 #container {
+}
+
+@media screen and (max-width: 620) {
+  header {
+    text-align: center;
+    color: #fff;
+    font-size: 3.5em;
+    font-family: "Cinzel Decorative", cursive;
 }
