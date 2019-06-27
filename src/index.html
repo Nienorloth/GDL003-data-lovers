@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section id="container">
+    <section id="headerButtons">
       <header>Champion Archive</header>
       <button class="buttons" id="allChampButton">All Champions</button>
       <button class="buttons" id="tanksButton">Tanks</button>
@@ -28,11 +28,14 @@
       <button class="buttons" id="fightersButton">Fighters</button>
       <button class="buttons" id="supportButton">Support</button>
       <button class="buttons" id="statButton">Statistics</button>
-      <section id="champions">
+    </section>
+     <section id="champions">
+          <button id="sortByAttack" class="sort" style="display:none">Sort by attack</button>
         <p id="champText"></p>
       </section>
-    </section id="characters" style="display:block">
-  </section>
+    <section id="details" style="display:none">
+      <p>Hola borola</p>
+      <button>Hola</button>
     </section>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>

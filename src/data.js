@@ -13,6 +13,7 @@ const sort = () => {
     console.log(`${championB.id} B: ${championB.info.attack}`);
     return championB.info.attack - championA.info.attack});
   console.log(championsArray);
+  
 };
 
 const computeStats = () => {
