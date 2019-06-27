@@ -20,7 +20,6 @@ body {
     text-align: center;
 }
 .buttons {
-<<<<<<< HEAD
     background-color: transparent;
     color: white;
     font-size: 1em;
@@ -30,17 +29,6 @@ body {
     font-family: 'Slabo 27px', serif;
     border-width: .2em;
     border-style: inset;
-=======
-  background-color: transparent;
-  color: white;
-  font-size: 1em;
-  width: 11%;
-  padding: 0.7%;
-  border-color: #d1aa68;
-  font-family: "Slabo 27px", serif;
-  border-width: 0.2em;
-  border-style: inset;
->>>>>>> 7ad48145c5d891ff3badb3ec5b60130a0d4c156a
 }
 .buttons:hover {
     background: rgba(0,0,0,0);
@@ -54,17 +42,12 @@ body {
     position: relative;
     float: left;
 }
-<<<<<<< HEAD
- @media screen and (max-widht: 800px){
-
- }
-=======
 
 @media screen and (max-width: 620) {
-  header {
-    text-align: center;
-    color: #fff;
-    font-size: 3.5em;
-    font-family: "Cinzel Decorative", cursive;
+    header {
+      text-align: center;
+      color: #fff;
+      font-size: 3.5em;
+      font-family: "Cinzel Decorative", cursive;
+  }
 }
->>>>>>> 7ad48145c5d891ff3badb3ec5b60130a0d4c156a
