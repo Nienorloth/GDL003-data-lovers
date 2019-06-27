@@ -2,29 +2,43 @@ const championsArray = Object.values(LOL.data);
 let bioButton = document.createElement("button");
 
 const showAll = () => {
-    championsArray.forEach(champion => {
+  championsArray.forEach(champion => {
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
     championPic.setAttribute("width", "60");
     championPic.setAttribute("height", "60");
     champText.appendChild(championPic);
     champText.innerHTML +=
-      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
+      " " +
+      champion.name +
+      ", " +
+      champion.title +
+      ". " +
+      champion.tags +
+      ".  ";
     bioButton.innerHTML = "Biography";
     bioButton.className = "Bio";
     champText.appendChild(bioButton);
     let statsButton = document.createElement("button");
     statsButton.innerHTML = "Stats";
     champText.appendChild(statsButton);
-    champText.innerHTML += "<br>"
+    champText.innerHTML += "<br>";
   });
   const characterBio = () => {
     alert("si");
-  document.getElementById("champText").style.display = "none";
-  document.getElementById("characters").style.display = "block";
-  }
-  document.getElementsbyClassName("Bio").addEventListener("click", characterBio);
+    document.getElementById("champText").style.display = "none";
+    document.getElementById("characters").style.display = "block";
+  };
+  document
+    .getElementsbyClassName("Bio")
+    .addEventListener("click", characterBio);
 };
+<script>
+function mostrar(){
+document.getElementById('nuevaimg').innerHTML = '<img src="ruta-imagen.jpg">';}
+</script>
+<a href="javascript:mostrar()">Mostrar</a>
+
 
 document.getElementById("allChampButton").addEventListener("click", showAll);
 document
@@ -45,4 +59,3 @@ document
 document
   .getElementById("statButton")
   .addEventListener("click", window.dataManager.sort);
-
