@@ -2,7 +2,11 @@ header {
     text-align: center;
     color: #d1aa68;
     font-size: 3.5em;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: "Cinzel Decorative", cursive;
+}
+#headerButtons {
+    margin-bottom: 1em;
+    text-align: center;
 }
 body {
     background-image: url("imagenes/backpic.jpg");
@@ -15,6 +19,7 @@ body {
     text-align: center;
     font-size: 2em;
     background: rgba(92, 80, 80, 0.5);
+
 }
 #buttons {
     text-align: center;
@@ -29,6 +34,7 @@ body {
     font-family: 'Slabo 27px', serif;
     border-width: .2em;
     border-style: inset;
+    
 }
 .buttons:hover {
     background: rgba(0,0,0,0);
@@ -38,9 +44,9 @@ body {
     font-weight: bold;
     
 }
-.sort {
+#champions {
     position: relative;
-    float: left;
+    text-align: center;
 }
 
 @media screen and (max-width: 620) {
