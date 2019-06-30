@@ -1,41 +1,41 @@
 const championsArray = Object.values(LOL.data);
-
+let count = 0;
 const attackSort = document.getElementById("sortByAttack");
 const defenseSort = document.getElementById("sortByDefense");
 const magicSort = document.getElementById("sortByMagic");
 const difficultySort = document.getElementById("sortByDifficulty");
 const aZ = document.getElementById("sortByAZ");
 const allChamp = document.getElementById("allChampButton");
+const tanksFilter = document.getElementById("tanksButton");
+const magesFilter = document.getElementById("magesButton");
+const assassinsFilter = document.getElementById("assassinsButton");
+const marksmenFilter = document.getElementById("marksmenButton");
+const fightersFilter = document.getElementById("fightersButton");
+const supportFilter = document.getElementById("supportButton");
+const statButton = document.getElementById("statButton");
 
-/*const characterBio = () => {
+const characterBio = () => {
   document.getElementById("champions").style.display="none";
   document.getElementById("details").style.display="block";
-}*/
-
+}
 let showAll = () => {
   document.getElementById("champions").style.display="block";
   champText.innerHTML = '';
   championsArray.forEach(champion => {
+  let champButton = document.createElement("button");
+  champButton.className = "picButtons"
   let championPic = document.createElement("IMG");
   championPic.setAttribute("src", champion.img);
-  championPic.setAttribute("width", "60");
-  championPic.setAttribute("height", "60");
-  champText.appendChild(championPic);
+  championPic.setAttribute("width", "63");
+  championPic.setAttribute("height", "63");
+  championPic.setAttribute("border", "6");
+  championPic.setAttribute("alt", "Character info");
+  champButton.appendChild(championPic);
+  champText.appendChild(champButton);
   champText.innerHTML +=
-    " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-  let bioButton = document.createElement("button");
-  bioButton.innerHTML = "Biography";
-  bioButton.className = "Bio";
-  champText.appendChild(bioButton);
-  //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-  let statsButton = document.createElement("button");
-  statsButton.innerHTML = "Stats";
-  statsButton.className = "Bio";
-  champText.appendChild(statsButton);
-  champText.innerHTML += "<br>";
+  " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
 });
 }
-
 let sortByAttack = () => {
     document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
@@ -45,27 +45,20 @@ let sortByAttack = () => {
     console.log(championsArray);
     champText.innerHTML = '';
     championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
-    championPic.setAttribute("width", "60");
-    championPic.setAttribute("height", "60");
-    champText.appendChild(championPic) 
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
     champText.innerHTML +=
-    " Attack: "+ champion.info.attack + ". " +
-    champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-    let bioButton = document.createElement("button");
-    bioButton.innerHTML = "Biography";
-    bioButton.className = "Bio";
-    champText.appendChild(bioButton);
-    //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-    let statsButton = document.createElement("button");
-    statsButton.innerHTML = "Stats";
-    statsButton.className = "Bio";
-    champText.appendChild(statsButton);
-    champText.innerHTML += "<br>";
-});
+    " " + "Attack: " + champion.info.attack + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+    });
 }
-
 let sortByDefense = () => {
     document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
@@ -74,29 +67,21 @@ let sortByDefense = () => {
     return championB.info.defense - championA.info.defense});
     console.log(championsArray);
     champText.innerHTML = '';
-    championsArray.forEach(champion => {
+      championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
-    championPic.setAttribute("width", "60");
-    championPic.setAttribute("height", "60");
-    champText.appendChild(championPic);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
     champText.innerHTML +=
-    " Defense: "+ champion.info.defense + ". " +
-      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-    let bioButton = document.createElement("button");
-    bioButton.innerHTML = "Biography";
-    bioButton.className = "Bio";
-    champText.appendChild(bioButton);
-    //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-    let statsButton = document.createElement("button");
-    statsButton.innerHTML = "Stats";
-    statsButton.className = "Bio";
-    champText.appendChild(statsButton);
-    champText.innerHTML += "<br>";
-  });
-
+    " " + "Defense: " + champion.info.defense + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+      });
 }
-
 let sortByMagic = () => {
 document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
@@ -106,27 +91,20 @@ document.getElementById("champions").style.display="block";
     console.log(championsArray);
     champText.innerHTML = '';
     championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
-    championPic.setAttribute("width", "60");
-    championPic.setAttribute("height", "60");
-    champText.appendChild(championPic);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
     champText.innerHTML +=
-    " Magic: "+ champion.info.magic + ". " +
-      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-    let bioButton = document.createElement("button");
-    bioButton.innerHTML = "Biography";
-    bioButton.className = "Bio";
-    champText.appendChild(bioButton);
-    //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-    let statsButton = document.createElement("button");
-    statsButton.innerHTML = "Stats";
-    statsButton.className = "Bio";
-    champText.appendChild(statsButton);
-    champText.innerHTML += "<br>";
-  });
+    " " + "Magic: " + champion.info.magic + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+      });
 }
-
 let sortByDifficulty = () => {
   document.getElementById("champions").style.display="block";
   championsArray.sort((championA, championB) => {
@@ -136,55 +114,169 @@ let sortByDifficulty = () => {
   console.log(championsArray);
   champText.innerHTML = '';
   championsArray.forEach(champion => {
+  let champButton = document.createElement("button");
+  champButton.className = "picButtons"
   let championPic = document.createElement("IMG");
   championPic.setAttribute("src", champion.img);
-  championPic.setAttribute("width", "60");
-  championPic.setAttribute("height", "60");
-  champText.appendChild(championPic);
+  championPic.setAttribute("width", "63");
+  championPic.setAttribute("height", "63");
+  championPic.setAttribute("border", "6");
+  championPic.setAttribute("alt", "Character info");
+  champButton.appendChild(championPic);
+  champText.appendChild(champButton);
   champText.innerHTML +=
-  " Difficulty: "+ champion.info.difficulty + ". " +
-    " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-  let bioButton = document.createElement("button");
-  bioButton.innerHTML = "Biography";
-  bioButton.className = "Bio";
-  champText.appendChild(bioButton);
-  //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-  let statsButton = document.createElement("button");
-  statsButton.innerHTML = "Stats";
-  statsButton.className = "Bio";
-  champText.appendChild(statsButton);
-  champText.innerHTML += "<br>";
-});
+  " " + "Difficulty: " + champion.info.difficulty + ". " + + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+  });
 }
-
 let sortByAZ = () => {
   document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
-    console.log(`${championA.id} A: ${championA.info.name}`);
-    console.log(`${championB.id} B: ${championB.info.name}`);
-    return championB.info.name - championA.info.name});
-    console.log(championsArray);
+    let nameA = championA.id.toUpperCase();
+    let nameB = championB.id.toUpperCase();
+    if (nameA < nameB) {
+      return -1
+    }
+    return 0;
+    });
     champText.innerHTML = '';
     championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
     let championPic = document.createElement("IMG");
     championPic.setAttribute("src", champion.img);
-    championPic.setAttribute("width", "60");
-    championPic.setAttribute("height", "60");
-    champText.appendChild(championPic);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
     champText.innerHTML +=
-      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  ";
-    let bioButton = document.createElement("button");
-    bioButton.innerHTML = "Biography";
-    bioButton.className = "Bio";
-    champText.appendChild(bioButton);
-    //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
-    let statsButton = document.createElement("button");
-    statsButton.innerHTML = "Stats";
-    statsButton.className = "Bio";
-    champText.appendChild(statsButton);
-    champText.innerHTML += "<br>";
-  });
+      " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+    });
 }
+const tanksFunc = () => {
+    document.getElementById("champions").style.display="block";
+    let tanks = championsArray.filter(tank => {return tank.tags.includes("Tank")});
+    console.log(tanks);
+    champText.innerHTML = "";
+    tanks.forEach(tank => {
+      let tankButton = document.createElement("button");
+      tankButton.className = "picButtons";
+      let tankPic = document.createElement("IMG");
+      tankPic.setAttribute("src", tank.img);
+      tankPic.setAttribute("width", "63");
+      tankPic.setAttribute("height", "63");
+      tankPic.setAttribute("border", "6");
+      tankPic.setAttribute("alt", "Character info");
+      tankButton.appendChild(tankPic);
+      champText.appendChild(tankButton);
+      champText.innerHTML +=
+      " " + tank.name + " " + tank.title + " " + tank.tags + ". <br>";
+    });
+    } 
+    const magesFunc = () => {
+      document.getElementById("champions").style.display="block";
+      let mages = championsArray.filter(mage => {return mage.tags.includes("Mage")});
+      console.log(mages);
+      champText.innerHTML = "";
+      mages.forEach(mage => {
+        let mageButton = document.createElement("button");
+        mageButton.className = "picButtons";
+        let magePic = document.createElement("IMG");
+        magePic.setAttribute("src", mage.img);
+        magePic.setAttribute("width", "63");
+        magePic.setAttribute("height", "63");
+        magePic.setAttribute("border", "6");
+        magePic.setAttribute("alt", "character info");
+        mageButton.appendChild(magePic);
+        champText.appendChild(mageButton);
+        champText.innerHTML +=
+        " " + mage.name + " " + mage.title + " " + mage.tags + ". <br>";
+      });
+      } 
+      const assassinsFunc = () => {
+        document.getElementById("champions").style.display="block";
+        let assassins = championsArray.filter(assassin => {return assassin.tags.includes("Assassin")});
+        console.log(assassins);
+        champText.innerHTML = "";
+        assassins.forEach(assassin => {
+          let assassinButton = document.createElement("button");
+          assassinButton.className = "picButtons";
+          let assassinPic = document.createElement("IMG");
+          assassinPic.setAttribute("src", assassin.img);
+          assassinPic.setAttribute("width", "63");
+          assassinPic.setAttribute("height", "63");
+          assassinPic.setAttribute("border", "6");
+          assassinPic.setAttribute("alt", "Character info");
+          assassinButton.appendChild(assassinPic);
+          champText.appendChild(assassinButton);
+          champText.innerHTML +=
+          " " + assassin.name + " " + assassin.title + " " + assassin.tags + ". <br>";
+        });
+        }   
+    const marksmenFunc = () => {
+      document.getElementById("champions").style.display="block";
+      let marksmen = championsArray.filter(marksman => {return marksman.tags.includes("Marksman")});
+      console.log(marksmen);
+      champText.innerHTML = "";
+      marksmen.forEach(marksman => {
+        let marksmanButton = document.createElement("button");
+        marksmanButton.className = "picButtons";
+        let marksmanPic = document.createElement("IMG");
+        marksmanPic.setAttribute("src", marksman.img);
+        marksmanPic.setAttribute("width", "63");
+        marksmanPic.setAttribute("height", "63");
+        marksmanPic.setAttribute("border", "6");
+        marksmanPic.setAttribute("alt", "Character info");
+        marksmanButton.appendChild(marksmanPic);
+        champText.appendChild(marksmanButton);
+        champText.innerHTML +=
+        " " + marksman.name + " " + marksman.title + " " + marksman.tags + ". <br>";
+      });
+      } 
+      const fightersFunc = () => {
+        document.getElementById("champions").style.display="block";
+        let fighters = championsArray.filter(fighter => {return fighter.tags.includes("Fighter")});
+        console.log(fighters);
+        champText.innerHTML = "";
+        fighters.forEach(fighter => {
+          let fighterButton = document.createElement("button");
+          fighterButton.className = "picButtons";
+          let fighterPic = document.createElement("IMG");
+          fighterPic.setAttribute("src", fighter.img);
+          fighterPic.setAttribute("width", "63");
+          fighterPic.setAttribute("height", "63");
+          fighterPic.setAttribute("border", "6");
+          fighterPic.setAttribute("alt", "Character info");
+          fighterButton.appendChild(fighterPic);
+          champText.appendChild(fighterButton);
+          champText.innerHTML +=
+          " " + fighter.name + " " + fighter.title + " " + fighter.tags + ". <br>";
+        });
+        } 
+        const supportFunc = () => {
+          document.getElementById("champions").style.display="block";
+          let supports = championsArray.filter(support => {return support.tags.includes("Support")});
+          console.log(supports);
+          champText.innerHTML = "";
+          supports.forEach(support => {
+            let supportButton = document.createElement("button");
+            supportButton.className = "picButtons";
+            let supportPic = document.createElement("IMG");
+            supportPic.setAttribute("src", support.img);
+            supportPic.setAttribute("width", "63");
+            supportPic.setAttribute("height", "63");
+            supportPic.setAttribute("border", "6");
+            supportPic.setAttribute("alt", "Character info");
+            supportButton.appendChild(supportPic);
+            champText.appendChild(supportButton);
+            champText.innerHTML +=
+            " " + support.name + " " + support.title + " " + support.tags + ". <br>";
+          });
+          } 
+    
+    
+    
 attackSort.addEventListener("click", sortByAttack);
 defenseSort.addEventListener("click", sortByDefense);
 magicSort.addEventListener("click", sortByMagic);
@@ -192,10 +284,10 @@ difficultySort.addEventListener("click", sortByDifficulty);
 aZ.addEventListener("click", sortByAZ);
 allChamp.addEventListener("click", showAll);
 
-document.getElementById("allChampButton").addEventListener("click", window.dataManager.sort);
-document.getElementById("tanksButton").addEventListener("click", window.dataManager.filter);
-document.getElementById("magesButton").addEventListener("click", window.dataManager.filter);
-document.getElementById("assassinsButton").addEventListener("click", window.dataManager.filter);
-document.getElementById("marksmenButton").addEventListener("click", window.dataManager.filter);
-document.getElementById("supportButton").addEventListener("click", window.dataManager.filter);
-document.getElementById("statButton").addEventListener("click", window.dataManager.computeStats);
+tanksFilter.addEventListener("click", tanksFunc);
+magesFilter.addEventListener("click", magesFunc);
+assassinsFilter.addEventListener("click", assassinsFunc);
+marksmenFilter.addEventListener("click", marksmenFunc);
+fightersFilter.addEventListener("click", fightersFunc);
+supportFilter.addEventListener("click", supportFunc);
+//statButton.addEventListener("click", window.dataManager.computeStats);

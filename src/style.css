@@ -48,7 +48,13 @@ body {
     position: relative;
     text-align: center;
 }
-
+ .picButtons {
+    background: rgba(0,0,0,0);
+    border: none;
+    width: 63px;
+    height: 63px;
+    margin-right: 2em;  
+ }
 @media screen and (max-width: 620) {
     header {
       text-align: center;
