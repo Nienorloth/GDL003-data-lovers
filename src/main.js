@@ -1,10 +1,4 @@
 let championsArray = Object.values(LOL.data);
-let tanks = 0;
-let mages = 0;
-let assasins = 0;
-let marksmen = 0;
-let fighters = 0;
-let supports = 0;
 const attackSort = document.getElementById("sortByAttack");
 const defenseSort = document.getElementById("sortByDefense");
 const magicSort = document.getElementById("sortByMagic");
@@ -19,7 +13,7 @@ const fightersFilter = document.getElementById("fightersButton");
 const supportFilter = document.getElementById("supportButton");
 const statButton = document.getElementById("statButton");
 
-const characterBio = () => {
+const detailsScreen = () => {
   document.getElementById("champions").style.display="none";
   document.getElementById("statistics").style.display="block";
 }
@@ -314,4 +308,4 @@ assassinsFilter.addEventListener("click", assassinsFunc);
 marksmenFilter.addEventListener("click", marksmenFunc);
 fightersFilter.addEventListener("click", fightersFunc);
 supportFilter.addEventListener("click", supportFunc);
-statButton.addEventListener("click", characterBio);
+statButton.addEventListener("click", detailsScreen);
