@@ -1,5 +1,10 @@
-const championsArray = Object.values(LOL.data);
-let count = 0;
+let championsArray = Object.values(LOL.data);
+let tanks = 0;
+let mages = 0;
+let assasins = 0;
+let marksmen = 0;
+let fighters = 0;
+let supports = 0;
 const attackSort = document.getElementById("sortByAttack");
 const defenseSort = document.getElementById("sortByDefense");
 const magicSort = document.getElementById("sortByMagic");
@@ -16,10 +21,12 @@ const statButton = document.getElementById("statButton");
 
 const characterBio = () => {
   document.getElementById("champions").style.display="none";
-  document.getElementById("details").style.display="block";
+  document.getElementById("statistics").style.display="block";
 }
 let showAll = () => {
+  championsArray = Object.values(LOL.data);
   document.getElementById("champions").style.display="block";
+  document.getElementById("champText").style.display="block";
   champText.innerHTML = '';
   championsArray.forEach(champion => {
   let champButton = document.createElement("button");
@@ -36,7 +43,7 @@ let showAll = () => {
   " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
 });
 }
-let sortByAttack = () => {
+let sortByAttack = () => { 
     document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
     console.log(`${championA.id} A: ${championA.info.attack}`);
@@ -83,7 +90,7 @@ let sortByDefense = () => {
       });
 }
 let sortByMagic = () => {
-document.getElementById("champions").style.display="block";
+    document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
     console.log(`${championA.id} A: ${championA.info.magic}`);
     console.log(`${championB.id} B: ${championB.info.magic}`);
@@ -129,7 +136,7 @@ let sortByDifficulty = () => {
   });
 }
 let sortByAZ = () => {
-  document.getElementById("champions").style.display="block";
+    document.getElementById("champions").style.display="block";
     championsArray.sort((championA, championB) => {
     let nameA = championA.id.toUpperCase();
     let nameB = championB.id.toUpperCase();
@@ -155,8 +162,10 @@ let sortByAZ = () => {
     });
 }
 const tanksFunc = () => {
-    document.getElementById("champions").style.display="block";
-    let tanks = championsArray.filter(tank => {return tank.tags.includes("Tank")});
+  championsArray = Object.values(LOL.data);
+  document.getElementById("champions").style.display="block";
+  document.getElementById("champText").style.display="block";
+    tanks = championsArray.filter(tank => {return tank.tags.includes("Tank")});
     console.log(tanks);
     champText.innerHTML = "";
     tanks.forEach(tank => {
@@ -172,11 +181,14 @@ const tanksFunc = () => {
       champText.appendChild(tankButton);
       champText.innerHTML +=
       " " + tank.name + " " + tank.title + " " + tank.tags + ". <br>";
+      championsArray = tanks;
     });
     } 
     const magesFunc = () => {
+      championsArray = Object.values(LOL.data);
       document.getElementById("champions").style.display="block";
-      let mages = championsArray.filter(mage => {return mage.tags.includes("Mage")});
+      document.getElementById("champText").style.display="block";
+          mages = championsArray.filter(mage => {return mage.tags.includes("Mage")});
       console.log(mages);
       champText.innerHTML = "";
       mages.forEach(mage => {
@@ -192,11 +204,14 @@ const tanksFunc = () => {
         champText.appendChild(mageButton);
         champText.innerHTML +=
         " " + mage.name + " " + mage.title + " " + mage.tags + ". <br>";
+        championsArray = mages;
       });
       } 
       const assassinsFunc = () => {
+        championsArray = Object.values(LOL.data);
         document.getElementById("champions").style.display="block";
-        let assassins = championsArray.filter(assassin => {return assassin.tags.includes("Assassin")});
+        document.getElementById("champText").style.display="block";
+              assassins = championsArray.filter(assassin => {return assassin.tags.includes("Assassin")});
         console.log(assassins);
         champText.innerHTML = "";
         assassins.forEach(assassin => {
@@ -212,11 +227,14 @@ const tanksFunc = () => {
           champText.appendChild(assassinButton);
           champText.innerHTML +=
           " " + assassin.name + " " + assassin.title + " " + assassin.tags + ". <br>";
+          championsArray = assassins;
         });
         }   
     const marksmenFunc = () => {
+      championsArray = Object.values(LOL.data);
       document.getElementById("champions").style.display="block";
-      let marksmen = championsArray.filter(marksman => {return marksman.tags.includes("Marksman")});
+      document.getElementById("champText").style.display="block";
+          marksmen = championsArray.filter(marksman => {return marksman.tags.includes("Marksman")});
       console.log(marksmen);
       champText.innerHTML = "";
       marksmen.forEach(marksman => {
@@ -232,11 +250,14 @@ const tanksFunc = () => {
         champText.appendChild(marksmanButton);
         champText.innerHTML +=
         " " + marksman.name + " " + marksman.title + " " + marksman.tags + ". <br>";
+        championsArray = marksmen;
       });
       } 
       const fightersFunc = () => {
+        championsArray = Object.values(LOL.data);
         document.getElementById("champions").style.display="block";
-        let fighters = championsArray.filter(fighter => {return fighter.tags.includes("Fighter")});
+        document.getElementById("champText").style.display="block";
+              fighters = championsArray.filter(fighter => {return fighter.tags.includes("Fighter")});
         console.log(fighters);
         champText.innerHTML = "";
         fighters.forEach(fighter => {
@@ -252,11 +273,14 @@ const tanksFunc = () => {
           champText.appendChild(fighterButton);
           champText.innerHTML +=
           " " + fighter.name + " " + fighter.title + " " + fighter.tags + ". <br>";
+          championsArray = fighters;
         });
         } 
         const supportFunc = () => {
+          championsArray = Object.values(LOL.data);
           document.getElementById("champions").style.display="block";
-          let supports = championsArray.filter(support => {return support.tags.includes("Support")});
+          document.getElementById("champText").style.display="block";
+                  supports = championsArray.filter(support => {return support.tags.includes("Support")});
           console.log(supports);
           champText.innerHTML = "";
           supports.forEach(support => {
@@ -272,9 +296,9 @@ const tanksFunc = () => {
             champText.appendChild(supportButton);
             champText.innerHTML +=
             " " + support.name + " " + support.title + " " + support.tags + ". <br>";
+            championsArray = supports;
           });
-          } 
-    
+          }     
     
     
 attackSort.addEventListener("click", sortByAttack);
@@ -290,4 +314,4 @@ assassinsFilter.addEventListener("click", assassinsFunc);
 marksmenFilter.addEventListener("click", marksmenFunc);
 fightersFilter.addEventListener("click", fightersFunc);
 supportFilter.addEventListener("click", supportFunc);
-//statButton.addEventListener("click", window.dataManager.computeStats);
+statButton.addEventListener("click", characterBio);
