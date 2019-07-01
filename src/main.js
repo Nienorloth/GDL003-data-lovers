@@ -1,3 +1,16 @@
+
+const championsArray = Object.values(LOL.data);
+document
+  .getElementById("sortByAttack")
+  .addEventListener("click", window.dataManager.sort);
+const characterBio = () => {
+  document.getElementById("champions").style.display = "none";
+  document.getElementById("details").style.display = "block";
+};
+
+const showAll = () => {
+  document.getElementById("sortByAttack").style.display = "block";
+  championsArray.forEach(champion => {
 let championsArray = Object.values(LOL.data);
 const attackSort = document.getElementById("sortByAttack");
 const defenseSort = document.getElementById("sortByDefense");
@@ -57,6 +70,45 @@ let sortByAttack = () => {
     champButton.appendChild(championPic);
     champText.appendChild(champButton);
     champText.innerHTML +=
+      " " +
+      champion.name +
+      ", " +
+      champion.title +
+      ". " +
+      champion.tags +
+      ".  ";
+    let bioButton = document.createElement("button");
+    bioButton.innerHTML = "Biography";
+    bioButton.className = "Bio";
+    champText.appendChild(bioButton);
+    //document.getElementsByClassName("Bio").addEventListener("click", characterBio);
+    let statsButton = document.createElement("button");
+    statsButton.innerHTML = "Stats";
+    statsButton.className = "Bio";
+    champText.appendChild(statsButton);
+    champText.innerHTML += "<br>";
+  });
+};
+
+document.getElementById("allChampButton").addEventListener("click", showAll);
+document
+  .getElementById("tanksButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("magesButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("assassinsButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("marksmenButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("supportButton")
+  .addEventListener("click", window.dataManager.sort);
+document
+  .getElementById("statButton")
+  .addEventListener("click", window.dataManager.sor
     " " + "Attack: " + champion.info.attack + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
     });
 }
@@ -309,3 +361,4 @@ marksmenFilter.addEventListener("click", marksmenFunc);
 fightersFilter.addEventListener("click", fightersFunc);
 supportFilter.addEventListener("click", supportFunc);
 statButton.addEventListener("click", detailsScreen);
+
