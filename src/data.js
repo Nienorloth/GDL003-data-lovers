@@ -1,20 +1,87 @@
 
 
-const filter = () => {
-  const tanks = LOL.data.tags.filter(tags => (LOL.data.tags == 'Tank'));
-  document.getElementById('champText').innerHTML= tanks;
-  return 'filter';
+const filterData = () => {
+  
+  return 'filterData';
 };
 
-const sort = () => {
+const sortData = () => {
+  const attackSort = document.getElementById("sortByAttack");
+  const defenseSort = document.getElementById("sortByDefense");
+  const allChamp = document.getElementById("allChampButton");
+  attackSort.addEventListener("click", window.dataManager.sortData);
+  defenseSort.addEventListener("click", window.dataManager.sortData);
+  magicSort.addEventListener("click", window.dataManager.sortData);
+  difficultySort.addEventListener("click", window.dataManager.sortData);
+  aZ.addEventListener("click", window.dataManager.sortData);
+  allChamp.addEventListener("click", window.dataManager.sortData);
 
-  championsArray.sort((championA, championB) => {
+  document.getElementById("champions").style.display="block";
+  if (allChamp.clicked == true){ 
+    document.getElementById("champions").style.display="block";
+    champText.innerHTML = '';
+    championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
+    let championPic = document.createElement("IMG");
+    championPic.setAttribute("src", champion.img);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
+    champText.innerHTML +=
+    " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";  
+  });
+
+} else if (attackSort.clicked == true){ 
+    document.getElementById("champions").style.display="block";
+    championsArray.sort((championA, championB) => {
     console.log(`${championA.id} A: ${championA.info.attack}`);
     console.log(`${championB.id} B: ${championB.info.attack}`);
     return championB.info.attack - championA.info.attack});
-  console.log(championsArray);
+    console.log(championsArray);
+    champText.innerHTML = '';
+    championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
+    let championPic = document.createElement("IMG");
+    championPic.setAttribute("src", champion.img);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
+    champText.innerHTML +=
+    " " + "Attack: " + champion.info.attack + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+  });
   
-};
+ } else if (defenseSort.clicked == true){
+    document.getElementById("champions").style.display="block";
+    championsArray.sort((championA, championB) => {
+    console.log(`${championA.id} A: ${championA.info.defense}`);
+    console.log(`${championB.id} B: ${championB.info.defense}`);
+    return championB.info.defense - championA.info.defense});
+    console.log(championsArray);
+    champText.innerHTML = '';
+      championsArray.forEach(champion => {
+    let champButton = document.createElement("button");
+    champButton.className = "picButtons"
+    let championPic = document.createElement("IMG");
+    championPic.setAttribute("src", champion.img);
+    championPic.setAttribute("width", "63");
+    championPic.setAttribute("height", "63");
+    championPic.setAttribute("border", "6");
+    championPic.setAttribute("alt", "Character info");
+    champButton.appendChild(championPic);
+    champText.appendChild(champButton);
+    champText.innerHTML +=
+    " " + "Defense: " + champion.info.defense + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+  });
+ }
+}
 
 const computeStats = () => {
 
@@ -22,7 +89,7 @@ const computeStats = () => {
 };
 
 window.dataManager = {
-  filter,
-  sort,
+  filterData,
+  sortData,
   computeStats
 };

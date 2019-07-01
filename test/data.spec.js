@@ -1,21 +1,21 @@
 require('../src/data.js');
 
 
-describe('filter', () => {
+describe('filterData', () => {
   it('is a function', () => {
-    expect(typeof dataManager.filter).toBe('function');
+    expect(typeof dataManager.filterData).toBe('function');
   });
-  it('returns  `filter`', () => {
-    expect(dataManager.filter()).toBe('filter');
+  it('returns  `filterData`', () => {
+    expect(dataManager.filterData()).toBe('filterData');
   });
 });
 
-describe('sort', () => {
+describe('sortData', () => {
   it('is a function', () => {
-    expect(typeof dataManager.sort).toBe('function');
+    expect(typeof dataManager.sortData).toBe('function');
   });
-  it('returns  `filter`', () => {
-    expect(dataManager.sort()).toBe('sort');
+  it('returns  `filterData`', () => {
+    expect(dataManager.sortData()).toBe('sortData');
   });
 });
 
