@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap"
+      rel="stylesheet"
+    />
+    <title>LOL Champion Archive</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <section id="headerButtons">
+         <header>Champion Archive</header>
+            <button class="buttons" id="allChampButton">All Champions</button>
+            <button class="buttons" id="tanksButton">Tanks</button>
+            <button class="buttons" id="magesButton">Mages</button>
+            <button class="buttons" id="assassinsButton">Assassins</button>
+            <button class="buttons" id="marksmenButton">Marksmen</button>
+            <button class="buttons" id="fightersButton">Fighters</button>
+            <button class="buttons" id="supportButton">Support</button>
+            <button class="buttons" id="statButton">Statistics</button>
+       </section>
+       <section id="champions" style="display:none">
+            <button id="sortByAttack" class="buttons">Sort by attack</button>
+            <button id="sortByDefense" class="buttons">Sort by defense</button>
+            <button id="sortByMagic" class="buttons" >Sort by magic</button>
+            <button id="sortByDifficulty" class="buttons">Sort by difficulty</button>
+            <button id="sortByAZ" class="buttons">A-Z</button>
+       </section>
+       <section id="champText"></section>
+       <section id="details" style="display:none"> </section>
+           
+    <script src="./data/lol/lol.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
