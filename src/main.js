@@ -13,7 +13,12 @@ const marksmenFilter = document.getElementById("marksmenButton");
 const fightersFilter = document.getElementById("fightersButton");
 const supportFilter = document.getElementById("supportButton");
 const statButton = document.getElementById("statButton");
-
+const champImage = document.getElementById("champImage");
+const buttons = document.querySelectorAll(".buttons");
+/*const stats = buttons.map((button) => {
+  console.log(button.dataset.stats)
+});
+console.log(stats);*/
 const detailsScreen = () => {
   document.getElementById("champions").style.display="none";
   document.getElementById("statistics").style.display="block";
@@ -36,7 +41,7 @@ let showAll = () => {
   champText.appendChild(champButton);
   champText.innerHTML +=
   " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
-});
+   });
 }
 let sortByAttack = () => { 
     document.getElementById("champions").style.display="block";
@@ -57,6 +62,7 @@ let sortByAttack = () => {
     championPic.setAttribute("alt", "Character info");
     champButton.appendChild(championPic);
     champText.appendChild(champButton);
+    
     champText.innerHTML +=
     " " + "Attack: " + champion.info.attack + ". " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
     });
@@ -294,15 +300,19 @@ const tanksFunc = () => {
             championsArray = supports;
           });
           }     
-    
-    
-attackSort.addEventListener("click", sortByAttack);
-defenseSort.addEventListener("click", sortByDefense);
+attackSort.addEventListener("click", (event) => {
+  console.log(event.target.dataset.stats);
+  //window.dataManager.sortData(stats);
+});
+defenseSort.addEventListener("click", (event) => {
+  let stats = event.target.dataset.stats
+  window.dataManager.sortData(stats)
+  });
 magicSort.addEventListener("click", sortByMagic);
 difficultySort.addEventListener("click", sortByDifficulty);
 aZ.addEventListener("click", sortByAZ);
-allChamp.addEventListener("click", showAll);
 
+allChamp.addEventListener("click", showAll);
 tanksFilter.addEventListener("click", tanksFunc);
 magesFilter.addEventListener("click", magesFunc);
 assassinsFilter.addEventListener("click", assassinsFunc);
@@ -310,3 +320,12 @@ marksmenFilter.addEventListener("click", marksmenFunc);
 fightersFilter.addEventListener("click", fightersFunc);
 supportFilter.addEventListener("click", supportFunc);
 statButton.addEventListener("click", detailsScreen);
+
+
+
+/*attackSort.addEventListener("click", window.dataManager.sortData);
+defenseSort.addEventListener("click", window.dataManager.sortData);
+magicSort.addEventListener("click", window.dataManager.sortData);
+difficultySort.addEventListener("click", window.dataManager.sortData);
+aZ.addEventListener("click", window.dataManager.sortData);
+allChamp.addEventListener("click", window.dataManager.sortData);*/

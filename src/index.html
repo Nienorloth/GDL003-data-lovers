@@ -18,24 +18,38 @@
   <body>
       <section id="headerButtons">
          <header>Champion Archive</header>
-            <button class="buttons" id="allChampButton">All Champions</button>
-            <button class="buttons" id="tanksButton">Tanks</button>
-            <button class="buttons" id="magesButton">Mages</button>
-            <button class="buttons" id="assassinsButton">Assassins</button>
-            <button class="buttons" id="marksmenButton">Marksmen</button>
-            <button class="buttons" id="fightersButton">Fighters</button>
-            <button class="buttons" id="supportButton">Support</button>
-            <button class="buttons" id="statButton">Statistics</button>
+            <button class="buttons" data-stats="all" id="allChampButton" >All Champions</button>
+            <button class="buttons" data-stats="tanks" id="tanksButton">Tanks</button>
+            <button class="buttons" data-stats="mages" id="magesButton">Mages</button>
+            <button class="buttons" data-stats="assassins" id="assassinsButton">Assassins</button>
+            <button class="buttons" data-stats="marksmen" id="marksmenButton">Marksmen</button>
+            <button class="buttons" data-stats="fighter" id="fightersButton">Fighters</button>
+            <button class="buttons" data-stats="support" id="supportButton">Support</button>
+            <button class="buttons" data-stats="stat" id="statButton">Statistics</button>
        </section>
        <section id="champions" style="display:none">
-            <button id="sortByAttack" class="buttons">Sort by attack</button>
-            <button id="sortByDefense" class="buttons">Sort by defense</button>
-            <button id="sortByMagic" class="buttons" >Sort by magic</button>
-            <button id="sortByDifficulty" class="buttons">Sort by difficulty</button>
-            <button id="sortByAZ" class="buttons">A-Z</button>
+            <button id="sortByAttack" class="buttons" data-stats="attack">Sort by attack</button>
+            <button id="sortByDefense" class="buttons" data-stats="defense">Sort by defense</button>
+            <button id="sortByMagic" class="buttons" data-stats="magig" >Sort by magic</button>
+            <button id="sortByDifficulty" class="buttons" data-stats="diff">Sort by difficulty</button>
+            <button id="sortByAZ" class="buttons" data-stats="alphabetically">A-Z</button>
        </section>
-       <section id="champText"></section>
-       <section id="details" style="display:none"> </section>
+       <section id="champText">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>John Doe</h1> 
+              <p>Architect & Engineer</p> 
+              <p>We love that guy</p>
+            </div>
+          </div>
+        </div>
+       <section id="details" style="display:none"> 
+        <p>Hola borola</p>
+      </section>
            
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
