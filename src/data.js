@@ -1,3 +1,11 @@
+let championsArray = Object.values(LOL.data);
+console.log(championsArray);
+const champText = document.getElementById("champText");
+
+// let estadisticas = (134 / 100) * valor de filtrado
+// let letrero = estadisticas + "Este porcentaje es de estte tipo de rol "
+
+//función para filtrar por categoría (rol)
 const filterData = stats => {
   if (stats === "all") {
     championsArray = Object.values(LOL.data);
@@ -28,7 +36,7 @@ const filterData = stats => {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    tanks = championsArray.filter(tank => {
+    let tanks = championsArray.filter(tank => {
       return tank.tags.includes("Tank");
     });
     console.log(tanks);
@@ -52,7 +60,7 @@ const filterData = stats => {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    mages = championsArray.filter(mage => {
+    let mages = championsArray.filter(mage => {
       return mage.tags.includes("Mage");
     });
     console.log(mages);
@@ -76,7 +84,7 @@ const filterData = stats => {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    assassins = championsArray.filter(assassin => {
+    let assassins = championsArray.filter(assassin => {
       return assassin.tags.includes("Assassin");
     });
     console.log(assassins);
@@ -106,7 +114,7 @@ const filterData = stats => {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    marksmen = championsArray.filter(marksman => {
+    let marksmen = championsArray.filter(marksman => {
       return marksman.tags.includes("Marksman");
     });
     console.log(marksmen);
@@ -136,7 +144,7 @@ const filterData = stats => {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    fighters = championsArray.filter(fighter => {
+    let fighters = championsArray.filter(fighter => {
       return fighter.tags.includes("Fighter");
     });
     console.log(fighters);
@@ -162,11 +170,11 @@ const filterData = stats => {
         ". <br>";
       championsArray = fighters;
     });
-  } else if ((stats = "support")) {
+  } else if (stats === "support") {
     championsArray = Object.values(LOL.data);
     document.getElementById("champions").style.display = "block";
     document.getElementById("champText").style.display = "block";
-    supports = championsArray.filter(support => {
+    let supports = championsArray.filter(support => {
       return support.tags.includes("Support");
     });
     console.log(supports);
@@ -195,7 +203,7 @@ const filterData = stats => {
   }
   return "filterData";
 };
-
+//función para ordenar datos (todos o filtrados)
 const sortData = stats => {
   document.getElementById("champions").style.display = "block";
 
