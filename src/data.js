@@ -26,7 +26,7 @@ const filterData = (stats) => {
        <div class="flip-card">
            <div class="flip-card-inner">
              <div class="flip-card-front">
-               <img src="${frontPic}" height="230" width="280">
+               <img src="${frontPic}" height="360" width="690">
              </div>
              <div class="flip-card-back">
                <h1>${champion.name}</h1> 
