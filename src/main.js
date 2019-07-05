@@ -16,7 +16,37 @@ const statButton = document.getElementById("statButton");
 
 //Función para pantalla de estadísticas
 const statsScreen = allcharacters => {
-  let arrayStats;
+  let arrayStatistics = [];
+
+  arrayStatistics.push({
+    Role: "Tanks",
+    Count: filterData(allcharacters, "Tanks").length
+  });
+
+  arrayStatistics.push({
+    Role: "Mages",
+    Count: filterData(allcharacters, "Mages").length
+  });
+
+  arrayStatistics.push({
+    Role: "Assassins",
+    Count: filterData(allcharacters, "Assassins").length
+  });
+
+  arrayStatistics.push({
+    Role: "Marksmen",
+    Count: filterData(allcharacters, "Marksmen").length
+  });
+
+  arrayStatistics.push({
+    Role: "Fighters",
+    Count: filterData(allcharacters, "Fighters").length
+  });
+
+  arrayStatistics.push({
+    Role: "Support",
+    Count: filterData(allcharacters, "Support").length
+  });
   document.getElementById("champions").style.display = "none";
   document.getElementById("champText").style.display = "none";
   document.getElementById("statistics").style.display = "block";
