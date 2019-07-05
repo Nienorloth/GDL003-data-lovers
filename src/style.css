@@ -16,10 +16,8 @@ body {
     color:white;
 }
 #champText {
-    text-align: center;
     font-size: 2em;
-    /*background: rgba(92, 80, 80, 0.5);*/
-
+    text-align: center;
 }
 #buttons {
     text-align: center;
@@ -62,11 +60,16 @@ body {
      border-width: .2em;
      border-style: inset;
  }
+ #statistics {
+   text-align: center;
+   size: 2000px;
+ }
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
+    margin-left: 22%;
     background-color: transparent;
-    width: 280px;
-    height: 220px;
+    width: 690px;
+    height: 360px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -82,7 +85,7 @@ body {
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
   }
   
   /* Position the front and back side */
@@ -103,7 +106,9 @@ body {
   .flip-card-back {
     background-color:black;
     color: white;
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
+    font-size: 25px;
+    line-height: 5px;
   }
 @media screen and (max-width: 620) {
     header {
