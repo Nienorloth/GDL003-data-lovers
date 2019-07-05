@@ -16,9 +16,7 @@ body {
     color:white;
 }
 #champText {
-    text-align: center;
     font-size: 2em;
-    /*background: rgba(92, 80, 80, 0.5);*/
 
 }
 #buttons {
@@ -66,7 +64,7 @@ body {
 .flip-card {
     background-color: transparent;
     width: 280px;
-    height: 220px;
+    height: 230px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -104,6 +102,8 @@ body {
     background-color:black;
     color: white;
     transform: rotateY(180deg);
+    font-size: 20px;
+    line-height: 5px;
   }
 @media screen and (max-width: 620) {
     header {

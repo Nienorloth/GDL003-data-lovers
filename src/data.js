@@ -14,14 +14,33 @@ const filterData = (stats) => {
         champButton.className = "picButtons";
          let championPic = document.createElement("IMG");
           championPic.setAttribute("src", champion.img);
-          championPic.setAttribute("width", "63");
-          championPic.setAttribute("height", "63");
-          championPic.setAttribute("border", "6");
+          championPic.setAttribute("width", "53");
+          championPic.setAttribute("height", "53");
+          championPic.setAttribute("border", ".1");
           championPic.setAttribute("alt", "Character info");
           champButton.appendChild(championPic);
-           champText.appendChild(champButton);
-           champText.innerHTML +=
-           " " + champion.name + ", " + champion.title + ". " + champion.tags + ".  <br>";
+           let frontPic = champion.splash;
+           champText.innerHTML += " " +
+       `
+       <br>    
+       <div class="flip-card">
+           <div class="flip-card-inner">
+             <div class="flip-card-front">
+               <img src="${frontPic}" height="230" width="280">
+             </div>
+             <div class="flip-card-back">
+               <h1>${champion.name}</h1> 
+               <h3>${champion.title}</h3>
+               <p>${champion.tags}</p>
+               <p>Attack: ${champion.info.attack}</p> 
+               <p>Defense: ${champion.info.defense}</p>
+               <p>Magic: ${champion.info.magic}</p>
+               <p>Difficulty: ${champion.info.difficulty}</p>
+             </div>
+           </div>
+         </div>
+         <br>
+         `;
      });
 
   } else if (stats === "tanks"){
