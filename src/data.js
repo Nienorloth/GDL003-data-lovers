@@ -1,10 +1,13 @@
-
 let championsArray = Object.values(LOL.data);
+console.log(championsArray);
 const champText = document.getElementById("champText");
 
+// let estadisticas = (134 / 100) * valor de filtrado
+// let letrero = estadisticas + "Este porcentaje es de estte tipo de rol "
+
 //función para filtrar por categoría (rol)
-const filterData = (stats) => {
-  if (stats === "all"){
+const filterData = stats => {
+  if (stats === "all") {
     championsArray = Object.values(LOL.data);
      document.getElementById("champions").style.display="block";
      document.getElementById("champText").style.display="block";
@@ -224,13 +227,12 @@ const filterData = (stats) => {
 return 'filterData';
 };
 //función para ordenar datos (todos o filtrados)
-const sortData = (stats) => {
+const sortData = stats => {
+  document.getElementById("champions").style.display = "block";
 
-  document.getElementById("champions").style.display="block";
-
-   if (stats === "attack"){ 
-    document.getElementById("champions").style.display="block";
-     championsArray.sort((championA, championB) => {
+  if (stats === "attack") {
+    document.getElementById("champions").style.display = "block";
+    championsArray.sort((championA, championB) => {
       console.log(`${championA.id} A: ${championA.info.attack}`);
       console.log(`${championB.id} B: ${championB.info.attack}`);
         return championB.info.attack - championA.info.attack});
@@ -362,7 +364,7 @@ const sortData = (stats) => {
       let nameA = championA.id.toUpperCase();
       let nameB = championB.id.toUpperCase();
       if (nameA < nameB) {
-       return -1;
+        return -1;
       }
       return 0;
     });
@@ -396,8 +398,7 @@ return 'sortData';
 };
 
 const computeStats = () => {
-
-  return 'computeStats';
+  return "computeStats";
 };
 
 window.dataManager = {
