@@ -584,7 +584,7 @@ var LOL = {
       img:
         "https://www.masterypoints.com/assets/img/lol/champion_icons/Blitzcrank.png",
       splash:
-        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcranck_0.jpg",
+        "https://cdn.vox-cdn.com/thumbor/aFL1LNrZR8oBR_at_VEFH67Np6k=/0x0:1215x717/920x613/filters:focal(728x122:922x316):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63244638/Blitzcrank_Splash_0.0.0.jpg",
       blurb:
         "Zaun is a place where both magic and science have gone awry, and the unchecked nature of experimentation has taken its toll. However, Zaun's lenient restrictions allow their researchers and inventors the leeway to push the bounds of science at an ...",
       info: {
@@ -4951,7 +4951,7 @@ var LOL = {
       img:
         "https://www.masterypoints.com/assets/img/lol/champion_icons/Singed.png",
       splash:
-        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Signed_0.jpg",
+        "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/77/Singed_OriginalSkin.jpg/revision/latest?cb=20181021054534",
       blurb:
         "Singed descended from a long line of Zaun's revered chemists. Even in his youth, his talent for concocting potions far outstripped that of his peers, and he quickly distinguished himself from his less extraordinary chemist compatriots. It came as no ...",
       info: {
@@ -5367,7 +5367,7 @@ var LOL = {
       img:
         "https://www.masterypoints.com/assets/img/lol/champion_icons/TahmKench.png",
       splash:
-        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tamkench_0.jpg",
+        "https://pm1.narvii.com/5787/3c6ba77f906905d743b95b6bad592976b61607f0_hq.jpg",
       blurb:
         "''The whole world's a river, and I'm its king.''<br>Tahm Kench travels Runeterra's waterways, feeding his insatiable appetite with the misery of the unsuspecting. The singularly charming gourmand savors every moment of his victims' suffering.  A deal ...",
       info: {
