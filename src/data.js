@@ -26,21 +26,20 @@ const filterData = (stats) => {
   } else if (stats === "tanks"){
      championsArray = Object.values(LOL.data);
       document.getElementById("champions").style.display="block";
-      document.getElementById("champText").style.display="block";
-      let tanks = championsArray.filter(tank => {return tank.tags.includes("Tank")});
-        console.log(tanks);
+      document.getElementById("champText").style.display="inline";
+      let tanks = championsArray.filter(tank => {return tank.tags.includes("Tank");
+    });
+            console.log(tanks);
         champText.innerHTML = '';
         tanks.forEach(tank => {
             champText.innerHTML += " " +
         `
-        <br>    
-        <div class="flip-card">
+            <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="${tank.splash}" height="360" width="690">
+                <img src="${tank.splash}" height="220" width="280">
               </div>
               <div class="flip-card-back">
-                <h1><img src="${tank.img}" height="70" width="70"></h1>
                 <h1>${tank.name}</h1> 
                 <h3>${tank.title}</h3>
                 <p>${tank.tags}</p>
@@ -48,11 +47,43 @@ const filterData = (stats) => {
                 <p>Defense: ${tank.info.defense}</p>
                 <p>Magic: ${tank.info.magic}</p>
                 <p>Difficulty: ${tank.info.difficulty}</p>
+                <button class="bioButton" id="${tank.name}">About ${tank.name}</button>
               </div>
             </div>
           </div>
-          <br>
-          `;
+          <div id="${tank.name}myModal" class="modal" style="background-image:url(${tank.splash})">
+          <div class="modal-content">
+            <span class="close" id="${tank.name}close">&times;</span>
+             <p id="about">${tank.blurb}</p>
+          </div>
+        </div>
+          `
+          let modal = document.getElementById("myModal");         
+          let modalButtons = document.querySelectorAll(".bioButton");
+            modalButtons.forEach(modalButton => {
+              modalButton.addEventListener("click", () => {
+
+              //get the modal
+              let modalB = document.getElementById(modalButton.id + "myModal");
+
+               //get the span element that closes the modal
+              let spanB = document.getElementById(modalButton.id + "close");               
+       
+                //when clicks on button open modal
+                modalB.style.display = "block";
+
+              //when clicks on span close modal
+               spanB.onclick = () => {
+                  modalB.style.display = "none";
+              }
+                //to close when clicks anywhere outside
+                window.onclick = function (event) {
+                  if (event.target == modal){
+                    modal.style.display = "none";
+                 }
+               };         
+              });
+          });
              championsArray = tanks;
       });
 
@@ -60,7 +91,9 @@ const filterData = (stats) => {
         championsArray = Object.values(LOL.data);
         document.getElementById("champions").style.display="block";
         document.getElementById("champText").style.display="block";
-          let mages = championsArray.filter(mage => {return mage.tags.includes("Mage")});
+          let mages = championsArray.filter(mage => {
+          return mage.tags.includes("Mage");
+        });
           console.log(mages);
           champText.innerHTML = '';
           mages.forEach(mage => {
@@ -93,7 +126,9 @@ const filterData = (stats) => {
            championsArray = Object.values(LOL.data);
            document.getElementById("champions").style.display="block";
            document.getElementById("champText").style.display="block";
-            let assassins = championsArray.filter(assassin => {return assassin.tags.includes("Assassin")});
+            let assassins = championsArray.filter(assassin => {
+            return assassin.tags.includes("Assassin");
+          });
             console.log(assassins);
             champText.innerHTML = '';
             assassins.forEach(assassin => {
@@ -126,7 +161,9 @@ const filterData = (stats) => {
              championsArray = Object.values(LOL.data);
              document.getElementById("champions").style.display="block";
              document.getElementById("champText").style.display="block";
-              let marksmen = championsArray.filter(marksman => {return marksman.tags.includes("Marksman")});
+              let marksmen = championsArray.filter(marksman => {
+                return marksman.tags.includes("Marksman");
+              });
               console.log(marksmen);
               champText.innerHTML = '';
               marksmen.forEach(marksman => {
@@ -159,7 +196,9 @@ const filterData = (stats) => {
            championsArray = Object.values(LOL.data);
             document.getElementById("champions").style.display="block";
             document.getElementById("champText").style.display="block";
-             let fighters = championsArray.filter(fighter => {return fighter.tags.includes("Fighter")});
+             let fighters = championsArray.filter(fighter => {
+             return fighter.tags.includes("Fighter");
+            });
               console.log(fighters);
               champText.innerHTML = '';
               fighters.forEach(fighter => {
@@ -192,7 +231,9 @@ const filterData = (stats) => {
              championsArray = Object.values(LOL.data);
              document.getElementById("champions").style.display="block";
              document.getElementById("champText").style.display="block";
-              let supports = championsArray.filter(support => {return support.tags.includes("Support")});
+              let supports = championsArray.filter(support => {
+              return support.tags.includes("Support");
+            });
               console.log(supports);
               champText.innerHTML = '';
               supports.forEach(support => {
@@ -233,7 +274,8 @@ const sortData = (stats) => {
      championsArray.sort((championA, championB) => {
       console.log(`${championA.id} A: ${championA.info.attack}`);
       console.log(`${championB.id} B: ${championB.info.attack}`);
-        return championB.info.attack - championA.info.attack});
+        return championB.info.attack - championA.info.attack;
+      });
         console.log(championsArray);
         champText.innerHTML = '';
         championsArray.forEach(champion => {
@@ -265,7 +307,8 @@ const sortData = (stats) => {
       championsArray.sort((championA, championB) => {
         console.log(`${championA.id} A: ${championA.info.defense}`);
         console.log(`${championB.id} B: ${championB.info.defense}`);
-        return championB.info.defense - championA.info.defense});
+        return championB.info.defense - championA.info.defense;
+      });
         console.log(championsArray);
         champText.innerHTML = '';
         championsArray.forEach(champion => {
@@ -297,7 +340,8 @@ const sortData = (stats) => {
       championsArray.sort((championA, championB) => {
         console.log(`${championA.id} A: ${championA.info.magic}`);
         console.log(`${championB.id} B: ${championB.info.magic}`);
-        return championB.info.magic - championA.info.magic});
+        return championB.info.magic - championA.info.magic;
+      });
         console.log(championsArray);
         champText.innerHTML = '';
         championsArray.forEach(champion => {
@@ -329,7 +373,8 @@ const sortData = (stats) => {
       championsArray.sort((championA, championB) => {
         console.log(`${championA.id} A: ${championA.info.difficulty}`);
         console.log(`${championB.id} B: ${championB.info.difficulty}`);
-        return championB.info.difficulty - championA.info.difficulty});
+        return championB.info.difficulty - championA.info.difficulty;
+      });
         console.log(championsArray);
         champText.innerHTML = '';
         championsArray.forEach(champion => {

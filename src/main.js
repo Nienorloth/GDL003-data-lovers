@@ -29,6 +29,7 @@ champText.innerHTML = strongest;
 };*/
 
 //Eventos
+
 attackSort.addEventListener("click", (event) => {
    let stats = event.target.dataset.stats;
    window.dataManager.sortData(stats);
