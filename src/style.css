@@ -109,8 +109,9 @@ body {
   
   /* Style the back side */
   .flip-card-back {
-    background-color:black;
-    color: white;
+    background-color: rgba(0,0,0,);
+    background-color: rgba(0,0,0,0.4);
+      color: white;
     transform: rotateY(180deg);
     font-size: 65%;
     line-height: .1%;

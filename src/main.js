@@ -16,17 +16,11 @@ const statButton = document.getElementById("statButton");
 
 //Función para pantalla de estadísticas
 const statsScreen = () => {
-  document.getElementById("champions").style.display="none";
-  document.getElementById("champText").style.display="none";
-  document.getElementById("statistics").style.display="block";
+  document.getElementById("champions").style.display = "none";
+  document.getElementById("champText").style.display = "none";
+  document.getElementById("statistics").style.display = "block";
+  //Insertar botones que ejecuten funcion de estadisticas y usar allCharacters
 };
-/*const strongestFunc = () =>{
-  championsArray = Object.values(LOL.data);
-  let champion = championsArray.filter(champion => champion.info.attack === 10);
-  console.log(champion);
-let strongest = JSON.stringify(champion);
-champText.innerHTML = strongest;
-};*/
 
 //Eventos
 
@@ -35,12 +29,12 @@ attackSort.addEventListener("click", (event) => {
    window.dataManager.sortData(stats);
 });
 defenseSort.addEventListener("click", (event) => {
-   let stats = event.target.dataset.stats;
-   window.dataManager.sortData(stats);
+  let stats = event.target.dataset.stats;
+  window.dataManager.sortData(stats);
 });
 magicSort.addEventListener("click", (event) => {
-   let stats = event.target.dataset.stats;
-   window.dataManager.sortData(stats);
+  let stats = event.target.dataset.stats;
+  window.dataManager.sortData(stats);
 });
 difficultySort.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
@@ -51,7 +45,7 @@ aZ.addEventListener("click", (event) => {
   window.dataManager.sortData(stats);
 });
 
-allChamp.addEventListener("click",(event) => {
+allChamp.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
