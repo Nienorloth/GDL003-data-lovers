@@ -8,6 +8,7 @@
   "extends": "eslint:recommended",
   "globals": {
     "dataManager": false
+    "LOL": false
   },
   "rules": {
     "no-console": 0,
