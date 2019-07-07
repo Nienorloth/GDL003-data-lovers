@@ -55,6 +55,7 @@ const filterData = stats => {
       }
 
     //Mostrar datos filtrados en tarjetas de personaje con modal para mostrar información adicional del personaje
+    statsContainer.style.display = "none";  
      showChampions.innerHTML = '';
       championsArray.forEach(champion => {
          showChampions.innerHTML += " " +
