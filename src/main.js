@@ -1,4 +1,5 @@
-//Declaración de variables
+//Declaración de variables para eventos que ejecutan funciones de data.js
+
 const attackSort = document.getElementById("sortByAttack");
 const defenseSort = document.getElementById("sortByDefense");
 const magicSort = document.getElementById("sortByMagic");
@@ -12,17 +13,13 @@ const marksmenFilter = document.getElementById("marksmenButton");
 const fightersFilter = document.getElementById("fightersButton");
 const supportFilter = document.getElementById("supportButton");
 const statButton = document.getElementById("statButton");
-//const champText = document.getElementById("champText");
 
-//Función para pantalla de estadísticas
-const statsScreen = () => {
-  document.getElementById("champions").style.display = "none";
-  document.getElementById("champText").style.display = "none";
-  document.getElementById("statistics").style.display = "block";
-  //Insertar botones que ejecuten funcion de estadisticas y usar allCharacters
-};
 
-//Eventos
+//Eventos del DOM
+
+ statButton.addEventListener("click", (event) => {
+   window.dataManager.computeStats();
+ });
 
 attackSort.addEventListener("click", (event) => {
    let stats = event.target.dataset.stats;
@@ -73,4 +70,3 @@ supportFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-statButton.addEventListener("click", statsScreen);
