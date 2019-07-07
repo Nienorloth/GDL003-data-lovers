@@ -8,28 +8,69 @@ const filterData = (stats) => {
     championsArray = Object.values(LOL.data);
      document.getElementById("champions").style.display="block";
      document.getElementById("champText").style.display="block";
-        champText.innerHTML = "";
-        championsArray.forEach(champion => {
-          let champButton = document.createElement("button");
-          champButton.className = "picButtons";
-          let championPic = document.createElement("IMG");
-            championPic.setAttribute("src", champion.img);
-            championPic.setAttribute("width", "63");
-            championPic.setAttribute("height", "63");
-            championPic.setAttribute("border", "6");
-            championPic.setAttribute("alt", "Character info");
-            champButton.appendChild(championPic);
-            champText.appendChild(champButton);
-           champText.innerHTML +=
-             " " + champion.name + " " + champion.title + " " + champion.tags + ". <br>";
-     });
+     champText.innerHTML = '';
+     championsArray.forEach(champion => {
+         champText.innerHTML += " " +
+     `
+         <div class="flip-card">
+         <div class="flip-card-inner">
+           <div class="flip-card-front">
+             <img src="${champion.splash}" height="220" width="280">
+           </div>
+           <div class="flip-card-back">
+             <h1>${champion.name}</h1> 
+             <h3>${champion.title}</h3>
+             <p>${champion.tags}</p>
+             <p>Attack: ${champion.info.attack}</p> 
+             <p>Defense: ${champion.info.defense}</p>
+             <p>Magic: ${champion.info.magic}</p>
+             <p>Difficulty: ${champion.info.difficulty}</p>
+             <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
+           </div>
+         </div>
+       </div>
+       <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
+       <div class="modal-content">
+         <span class="close" id="${champion.name}close">&times;</span>
+          <p id="about">${champion.blurb}</p>
+       </div>
+     </div>
+       `
+       let modal = document.getElementById("myModal");         
+       let modalButtons = document.querySelectorAll(".bioButton");
+         modalButtons.forEach(modalButton => {
+           modalButton.addEventListener("click", () => {
+
+           //get the modal
+           let modalB = document.getElementById(modalButton.id + "myModal");
+
+            //get the span element that closes the modal
+           let spanB = document.getElementById(modalButton.id + "close");               
+    
+             //when clicks on button open modal
+             modalB.style.display = "block";
+
+           //when clicks on span close modal
+            spanB.onclick = () => {
+               modalB.style.display = "none";
+           }
+             //to close when clicks anywhere outside
+             window.onclick = function (event) {
+               if (event.target == modal){
+                 modal.style.display = "none";
+              }
+            };         
+           });
+       });
+   });
+
+     
   } else if (stats === "tanks"){
      championsArray = Object.values(LOL.data);
       document.getElementById("champions").style.display="block";
       document.getElementById("champText").style.display="inline";
       let tanks = championsArray.filter(tank => {return tank.tags.includes("Tank");
     });
-            console.log(tanks);
         champText.innerHTML = '';
         tanks.forEach(tank => {
             champText.innerHTML += " " +
