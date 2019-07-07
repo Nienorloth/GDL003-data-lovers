@@ -15,97 +15,61 @@ const statButton = document.getElementById("statButton");
 //const champText = document.getElementById("champText");
 
 //Función para pantalla de estadísticas
-const statsScreen = allcharacters => {
-  let arrayStatistics = [];
-
-  arrayStatistics.push({
-    Role: "Tanks",
-    Count: filterData(allcharacters, "Tanks").length
-  });
-
-  arrayStatistics.push({
-    Role: "Mages",
-    Count: filterData(allcharacters, "Mages").length
-  });
-
-  arrayStatistics.push({
-    Role: "Assassins",
-    Count: filterData(allcharacters, "Assassins").length
-  });
-
-  arrayStatistics.push({
-    Role: "Marksmen",
-    Count: filterData(allcharacters, "Marksmen").length
-  });
-
-  arrayStatistics.push({
-    Role: "Fighters",
-    Count: filterData(allcharacters, "Fighters").length
-  });
-
-  arrayStatistics.push({
-    Role: "Support",
-    Count: filterData(allcharacters, "Support").length
-  });
+const statsScreen = () => {
   document.getElementById("champions").style.display = "none";
   document.getElementById("champText").style.display = "none";
   document.getElementById("statistics").style.display = "block";
+  //Insertar botones que ejecuten funcion de estadisticas y usar allCharacters
 };
-/*const strongestFunc = () =>{
-  championsArray = Object.values(LOL.data);
-  let champion = championsArray.filter(champion => champion.info.attack === 10);
-  console.log(champion);
-let strongest = JSON.stringify(champion);
-champText.innerHTML = strongest;
-};*/
 
 //Eventos
-attackSort.addEventListener("click", event => {
+
+attackSort.addEventListener("click", (event) => {
+   let stats = event.target.dataset.stats;
+   window.dataManager.sortData(stats);
+});
+defenseSort.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.sortData(stats);
 });
-defenseSort.addEventListener("click", event => {
+magicSort.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.sortData(stats);
 });
-magicSort.addEventListener("click", event => {
+difficultySort.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.sortData(stats);
 });
-difficultySort.addEventListener("click", event => {
-  let stats = event.target.dataset.stats;
-  window.dataManager.sortData(stats);
-});
-aZ.addEventListener("click", event => {
+aZ.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.sortData(stats);
 });
 
-allChamp.addEventListener("click", event => {
+allChamp.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-tanksFilter.addEventListener("click", event => {
+tanksFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-magesFilter.addEventListener("click", event => {
+magesFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-assassinsFilter.addEventListener("click", event => {
+assassinsFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-marksmenFilter.addEventListener("click", event => {
+marksmenFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-fightersFilter.addEventListener("click", event => {
+fightersFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });
-supportFilter.addEventListener("click", event => {
+supportFilter.addEventListener("click", (event) => {
   let stats = event.target.dataset.stats;
   window.dataManager.filterData(stats);
 });

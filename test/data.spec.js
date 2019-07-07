@@ -1,7 +1,13 @@
 require("../src/data.js");
 const LOL = require("..src/data/lol/lol.json");
 
-describe("filterData", () => {
+describe('filterData()', () => {
+  it('debería devolver true para letra a');
+  it('debería devolver false para letra b');
+});
+
+
+/*describe("filterData", () => {
   it("is a function", () => {
     expect(typeof dataManager.filterData).toBe("function");
   });
