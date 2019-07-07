@@ -32,6 +32,9 @@ Los usuarios utizaran la web cuando son nuevos jugadores y no conocen acerca de 
 
 #### Prototipo de baja fidelidad
 
+En los siguientes enlaces se puede observar la primera [link](https://ibb.co/1JDYrJq) y segunda página
+[link](https://ibb.co/568bQcj) del prototipo hecho a lápiz y en papel
+
 #### Prototipo de alta fidelidad
 
 Para ver el prototipo de alta fidelidad de Data lovers-League of Legends en Marvelapp dirigirse al siguiente [link](https://marvelapp.com/1f215ij6/screen/58472119)
