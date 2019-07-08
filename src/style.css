@@ -574,57 +574,10 @@ body {
     font-size: 1.2em;
     font-weight: bold;
   }
-}
 
 /*Estilos para smartphone*/
 @media only screen and (min-width: 400px) and (max-width: 767px) {
-  <div class="flip-card">
-         <div class="flip-card-inner">
-           <div class="flip-card-front">
-             <img id="cardPic" src="${champion.splash}" height="220" width="280">
-           </div>
-           <div class="flip-card-back">
-             <h1>${champion.name}</h1> 
-             <h3>${champion.title}</h3>
-             <p>${champion.tags}</p>
-             <p>Attack: ${champion.info.attack}</p> 
-             <p>Defense: ${champion.info.defense}</p>
-             <p>Magic: ${champion.info.magic}</p>
-             <p>Difficulty: ${champion.info.difficulty}</p>
-             <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-           </div>
-         </div>
-       </div>
-       <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-       <div class="modal-content">
-         <span class="close" id="${champion.name}close">&times;</span>
-          <p id="about">${champion.blurb}</p>
-       </div>
-     </div>
-     <div class="flip-card">
-     <div class="flip-card-inner">
-       <div class="flip-card-front">
-         <img id="cardPic" src="${champion.splash}" height="220" width="280">
-       </div>
-       <div class="flip-card-back">
-         <h1>${champion.name}</h1> 
-         <h3>${champion.title}</h3>
-         <p>${champion.tags}</p>
-         <p>Attack: ${champion.info.attack}</p> 
-         <p>Defense: ${champion.info.defense}</p>
-         <p>Magic: ${champion.info.magic}</p>
-         <p>Difficulty: ${champion.info.difficulty}</p>
-         <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-       </div>
-     </div>
-   </div>
-   <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-   <div class="modal-content">
-     <span class="close" id="${champion.name}close">&times;</span>
-      <p id="about">${champion.blurb}</p>
-   </div>
- </div>
-   `
+  
   header {
     text-align: center;
     color: #d1aa68;
