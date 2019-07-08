@@ -2,8 +2,9 @@ require("../src/data.js");
 const LOL = require("..src/data/lol/lol.json");
 
 describe('filterData()', () => {
-  it('debería devolver true para letra a');
-  it('debería devolver false para letra b');
+  it('debería devolver true para function filterdata'); () =>{
+});
+  it('debería devolver false para sortData');
 });
 
 

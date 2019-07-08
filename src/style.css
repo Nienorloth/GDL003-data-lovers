@@ -255,53 +255,7 @@ body {
 
 /*Estilos para tablets*/
 @media only screen and (min-width: 768px) and (max-width: 940px) {
-  <div class="flip-card">
-         <div class="flip-card-inner">
-           <div class="flip-card-front">
-             <img id="cardPic" src="${champion.splash}" height="220" width="280">
-           </div>
-           <div class="flip-card-back">
-             <h1>${champion.name}</h1> 
-             <h3>${champion.title}</h3>
-             <p>${champion.tags}</p>
-             <p>Attack: ${champion.info.attack}</p> 
-             <p>Defense: ${champion.info.defense}</p>
-             <p>Magic: ${champion.info.magic}</p>
-             <p>Difficulty: ${champion.info.difficulty}</p>
-             <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-           </div>
-         </div>
-       </div>
-       <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-       <div class="modal-content">
-         <span class="close" id="${champion.name}close">&times;</span>
-          <p id="about">${champion.blurb}</p>
-       </div>
-     </div>
-     <div class="flip-card">
-     <div class="flip-card-inner">
-       <div class="flip-card-front">
-         <img id="cardPic" src="${champion.splash}" height="220" width="280">
-       </div>
-       <div class="flip-card-back">
-         <h1>${champion.name}</h1> 
-         <h3>${champion.title}</h3>
-         <p>${champion.tags}</p>
-         <p>Attack: ${champion.info.attack}</p> 
-         <p>Defense: ${champion.info.defense}</p>
-         <p>Magic: ${champion.info.magic}</p>
-         <p>Difficulty: ${champion.info.difficulty}</p>
-         <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-       </div>
-     </div>
-   </div>
-   <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-   <div class="modal-content">
-     <span class="close" id="${champion.name}close">&times;</span>
-      <p id="about">${champion.blurb}</p>
-   </div>
- </div>
-   `
+       
   header {
     text-align: center;
     color: #d1aa68;
@@ -370,8 +324,8 @@ body {
   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   .flip-card {
     background-color: transparent;
-    width: 280px;
-    height: 220px;
+    width: 140px ;
+height: 110px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
 
@@ -426,7 +380,6 @@ body {
     border-style: inset;
     transition: all 0.3s ease-in;
 }
-    font-size: bolder;
     }
   #allChampButton,
   #sortByDefense,
@@ -577,7 +530,7 @@ body {
 
 /*Estilos para smartphone*/
 @media only screen and (min-width: 400px) and (max-width: 767px) {
-  
+
   header {
     text-align: center;
     color: #d1aa68;
