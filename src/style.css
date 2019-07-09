@@ -259,7 +259,7 @@ body {
   header {
     text-align: center;
     color: #d1aa68;
-    font-size: 3.5em;
+    font-size: 1.5em;
     font-family: "Cinzel Decorative", cursive;
   }
   #headerButtons {
@@ -267,7 +267,7 @@ body {
     text-align: center;
   }
   body {
-    background-image: url("imagenes/backpic.jpg");
+    background-image: url("imagenes/backipad.jpg");
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@ body {
   .flip-card {
     background-color: transparent;
     width: 140px ;
-height: 110px;
+    height: 110px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
 
@@ -532,61 +532,6 @@ height: 110px;
 
 /*Estilos para smartphone*/
 @media only screen and (min-width: 400px) and (max-width: 767px) {
-<link
-  href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap"
-  rel="stylesheet"
-/>  
-  <div class="flip-card">
-         <div class="flip-card-inner">
-           <div class="flip-card-front">
-             <img id="cardPic" src="${champion.splash}" height="220" width="280">
-           </div>
-           <div class="flip-card-back">
-             <h1>${champion.name}</h1> 
-             <h3>${champion.title}</h3>
-             <p>${champion.tags}</p>
-             <p>Attack: ${champion.info.attack}</p> 
-             <p>Defense: ${champion.info.defense}</p>
-             <p>Magic: ${champion.info.magic}</p>
-             <p>Difficulty: ${champion.info.difficulty}</p>
-             <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-           </div>
-         </div>
-       </div>
-       <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-       <div class="modal-content">
-         <span class="close" id="${champion.name}close">&times;</span>
-          <p id="about">${champion.blurb}</p>
-       </div>
-     </div>
-     <div class="flip-card">
-     <div class="flip-card-inner">
-       <div class="flip-card-front">
-         <img id="cardPic" src="${champion.splash}" height="220" width="280">
-       </div>
-       <div class="flip-card-back">
-         <h1>${champion.name}</h1> 
-         <h3>${champion.title}</h3>
-         <p>${champion.tags}</p>
-         <p>Attack: ${champion.info.attack}</p> 
-         <p>Defense: ${champion.info.defense}</p>
-         <p>Magic: ${champion.info.magic}</p>
-         <p>Difficulty: ${champion.info.difficulty}</p>
-         <button class="bioButton" id="${champion.name}">About ${champion.name}</button>
-       </div>
-     </div>
-   </div>
-   <div id="${champion.name}myModal" class="modal" style="background-image:url(${champion.splash})">
-   <div class="modal-content">
-     <span class="close" id="${champion.name}close">&times;</span>
-      <p id="about">${champion.blurb}</p>
-   </div>
- </div>
-   `
   header {
     text-align: center;
     color: #d1aa68;
@@ -598,7 +543,7 @@ height: 110px;
     text-align: center;
   }
   body {
-    background-image: url("imagenes/backpic.jpg");
+    background-image: url("imagenes/backphone.jpg");
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
