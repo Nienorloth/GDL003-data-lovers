@@ -17,7 +17,6 @@ body {
 }
 #showChampions {
   text-align: center;
-  font-size: 2em;
   margin-left: 2%;
   /*background: rgba(92, 80, 80, 0.5);*/
 }
@@ -41,10 +40,6 @@ body {
   box-shadow: inset 0 0 0 3px #d1aa68;
   font-size: 1.2em;
   font-weight: bold;
-}
-#champions {
-  position: relative;
-  text-align: center;
 }
 .picButtons {
   background: rgba(0, 0, 0, 0);
@@ -109,7 +104,6 @@ body {
   font-size: .6em;
   line-height: .2em;  
 }
-
 .buttons {
   position: relative;
   display: inline-block;
@@ -124,7 +118,6 @@ body {
   border-style: inset;
   transition: all 0.3s ease-in;
 }
-
 #allChampButton,
 #sortByDefense,
 #sortByDifficulty {
@@ -157,7 +150,9 @@ body {
 }
 #statistics {
   text-align: center;
-  size: 2000px;
+  font-size: 2em;
+  background-color: rgba(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .bioButton {
   cursor: pointer;
