@@ -101,7 +101,7 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
   transform: rotateY(180deg);
-  font-size: .6em;
+  font-size: 1.2em;
   line-height: .2em;  
 }
 .buttons {
@@ -179,7 +179,7 @@ body {
   padding: 2%;
   width: 80%;
   height: 60%;
-  font-size: 1.2em;
+  font-size: 2.2em;
   background-color: rgba(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
