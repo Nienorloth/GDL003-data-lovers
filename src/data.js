@@ -224,17 +224,17 @@ const computeStats = () => {
 
     const supportCount = supports.length;
 
-    const tanksPercent = parseInt(tanksCount * 1.34);
+    const tanksPercent = parseInt((tanksCount*100)/134);
 
-    const magesPercent = parseInt(magesCount * 1.34);
+    const magesPercent = parseInt((magesCount*100)/134);
 
-    const assassinsPercent = parseInt(assassinsCount * 1.34);
+    const assassinsPercent = parseInt((assassinsCount*100)/134);
 
-    const marksmenPercent = parseInt(marksmenCount * 1.34);
+    const marksmenPercent = parseInt((marksmenCount*100)/134);
 
-    const fightersPercent = parseInt(fightersCount * 1.34);
+    const fightersPercent = parseInt((fightersCount*100)/134);
 
-    const supportPercent = parseInt(supportCount * 1.34);
+    const supportPercent = parseInt((supportCount*100)/134);
 
   // mostrar los totales de personajes por rol
   statsContainer.innerHTML = "This archive contains " + totalCount + " champions with the following shared roles:<br>Tanks: " + tanksCount
