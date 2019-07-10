@@ -109,10 +109,10 @@ return 'filterData';
 };
 
 
-//función para ordenar datos (todos los personajes o filtrados)
+//función para ordenar datos 
 const sortData = stats => {
 
- /* let championsToSort = Object.values(dataManager.filterData);
+ /* let championsToSort = Object.values(dataManager.filterData.championsArray);
   console.log(championsToSort);*/
  let championsToSort = allCharacters;
 
@@ -150,6 +150,7 @@ const sortData = stats => {
       return 0;
     });
   }
+  // mostrar datos ordenados en tarjetas
   showChampions.innerHTML = '';
   championsToSort.forEach(champion => {
      showChampions.innerHTML += " " +
@@ -184,7 +185,7 @@ const sortData = stats => {
       modalButtons.forEach(modalButton => {
        modalButton.addEventListener("click", () => {
 
-//Declarar variables de modal y botón X para cerrar modal
+      //Declarar variables de modal y botón X para cerrar modal
        let modal = document.getElementById(modalButton.id + "myModal");
        let spanX = document.getElementById(modalButton.id + "close");               
      
@@ -209,37 +210,15 @@ const computeStats = () => {
   statsContainer.style.display = "block";
   showChampions.innerHTML = '';
 
-  //variables de los totales por cada rol
-    const totalCount = allCharacters.length;
+  //array de los porcentajes por cada rol
+    const percentsArray = [];
+     percentsArray.push(parseInt((tanks.length*100)/134), parseInt((mages.length*100)/134), parseInt((assassins.length*100)/134), parseInt((marksmen.length*100)/134), parseInt((fighters.length*100)/134), parseInt((supports.length*100)/134));
+       console.log(percentsArray);
 
-    const tanksCount = tanks.length;
-
-    const magesCount = mages.length;
-
-    const assassinsCount = assassins.length;
-
-    const marksmenCount = marksmen.length;
-
-    const fightersCount = fighters.length;
-
-    const supportCount = supports.length;
-
-    const tanksPercent = parseInt(tanksCount * 1.34);
-
-    const magesPercent = parseInt(magesCount * 1.34);
-
-    const assassinsPercent = parseInt(assassinsCount * 1.34);
-
-    const marksmenPercent = parseInt(marksmenCount * 1.34);
-
-    const fightersPercent = parseInt(fightersCount * 1.34);
-
-    const supportPercent = parseInt(supportCount * 1.34);
-
-  // mostrar los totales de personajes por rol
-  statsContainer.innerHTML = "This archive contains " + totalCount + " champions with the following shared roles:<br>Tanks: " + tanksCount
-  + " (" + tanksPercent + "%)<br>Mages: " + magesCount + " (" + magesPercent + "%)<br>Assassins: " + assassinsCount + " (" + assassinsPercent + "%)<br>Marksmen: " + marksmenCount + 
-  " (" + marksmenPercent + "%)<br>Fighters: " + fightersCount + " (" + fightersPercent + "%)<br>Support characters: " + supportCount + " (" + supportPercent + "%)";
+  // mostrar los totales y porcentajes de personajes por rol
+  statsContainer.innerHTML = "This archive contains " + allCharacters.length + " champions with the following shared roles:<br>Tanks: " + tanks.length
+  + " (" + percentsArray[0] + "%)<br>Mages: " + mages.length + " (" + percentsArray[1] + "%)<br>Assassins: " + assassins.length + " (" + percentsArray[2] + "%)<br>Marksmen: " + marksmen.length + 
+  " (" + percentsArray[3] + "%)<br>Fighters: " + fighters.length + " (" + percentsArray[4] + "%)<br>Support characters: " + supports.length + " (" + percentsArray[5] + "%)";
 
   return "computeStats";
 };
