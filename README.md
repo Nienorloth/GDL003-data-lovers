@@ -14,8 +14,8 @@ Aquellos nuevos jugadores de League of Legends que desean conocer acerca de los 
 
 #### Prototipo de baja fidelidad
 
-En los siguientes enlaces se puede observar la primera [link](https://ibb.co/1JDYrJq) y segunda página
-[link](https://ibb.co/568bQcj) del prototipo hecho a lápiz y en papel
+En los siguientes enlaces se puede observar la [primera](https://ibb.co/1JDYrJq) y 
+[segunda](https://ibb.co/568bQcj) página del prototipo hecho a lápiz y en papel
 
 #### Prototipo de alta fidelidad
 
