@@ -176,7 +176,7 @@ body {
   font-weight: bold;
 }
 /*Beginning 1024 desktop media queries*/
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+@media screen (min-width: 1024px) and (max-width: 1199px) {
 #showChampions {
   margin: 1% 4% 1% 4%;
 }
@@ -190,7 +190,7 @@ body {
   }
 }
 /*Beginning tablet media queries*/
-@media screen and  (min-width: 760px) and (max-width: 1023px) {
+@media screen and (max-width: 1023px) {
   #showChampions {
     margin: 1% 10% 1% 10%;
   }
