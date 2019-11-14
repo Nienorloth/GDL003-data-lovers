@@ -211,7 +211,7 @@ body {
     line-height: .2em;  
   }
   body {
-    background-image: './imagenes/backipad.jpg';
+    background-image: url('./imagenes/backipad.jpg');
   }
 
 }
@@ -243,7 +243,7 @@ body {
       font-size: 1.2em;
     }
     body {
-      background-image: './imagenes/backphone.jpg';
+      background-image: url('./imagenes/backphone.jpg');
     }
     
 }
