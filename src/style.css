@@ -227,7 +227,7 @@ body {
     line-height: .3em;  
   }
   #showChampions {
-    margin-left: 3%;
+    margin-left: 7%;
   }
   .modal {
     background-position: center;
@@ -239,12 +239,9 @@ body {
       font-size: 1.2em;
     }
     body {
+      background: black;
+      background-image: none;
       background-size: 100%;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: white;
-      background-position: center;
-      background-size: cover;
     }
     
 }
