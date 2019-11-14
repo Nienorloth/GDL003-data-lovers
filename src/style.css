@@ -15,7 +15,6 @@ body {
   background-repeat: no-repeat;
   color: white;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 #showChampions {
@@ -239,4 +238,13 @@ body {
     .modal-content {
       font-size: 1.2em;
     }
+    body {
+      background-size: 100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: white;
+      background-position: center;
+      background-size: cover;
+    }
+    
 }
