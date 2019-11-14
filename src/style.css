@@ -210,6 +210,10 @@ body {
     font-size: 1em;
     line-height: .2em;  
   }
+  body {
+    background-image: './imagenes/backipad.jpg';
+  }
+
 }
 
 /*Beginning smartpone media queries*/
@@ -239,9 +243,7 @@ body {
       font-size: 1.2em;
     }
     body {
-      background: black;
-      background-image: none;
-      background-size: 100%;
+      background-image: './imagenes/backphone.jpg';
     }
     
 }
