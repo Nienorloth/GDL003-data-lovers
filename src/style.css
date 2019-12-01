@@ -211,7 +211,8 @@ body {
     line-height: .2em;  
   }
   body {
-    background-image: none;
+    background-image: url("imagenes/backipad.jpg");
+    background-size: 100%;
     background-color: black;
   }
 
@@ -243,9 +244,5 @@ body {
     .modal-content {
       font-size: 1.2em;
     }
-    body {
-      background-image: none;
-      background-color: black;
-    }
-    
+         
 }
